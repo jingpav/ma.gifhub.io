@@ -1,0 +1,109 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-size: 12px;
+    background-color: rgb(127, 236, 255);
+  
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 0 20px;
+  
+}
+
+nav {
+    text-align: center;
+    position: relative;
+    width:  90%;
+    height: 50px;
+    background-color: rgb(78, 80, 81);
+    border-radius: 8px;
+    font-size: 0;
+}
+
+nav a {
+    font-size: 15px;
+    line-height: 50px;
+    height: 100%;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+    text-transform: uppercase;
+    text-decoration: none;
+    text-align: center;
+    color: aliceblue;
+    cursor: pointer;
+    transition: color 0.3s;
+}
+
+nav a:hover {
+    color: yellow;
+}
+
+nav a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: transparent;
+    transition: background 0.3s, width 0.4s;
+    width: 0;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+nav a:hover::after {
+    background: yellow;
+    width: 100%;
+}
+
+nav .animation {
+    position: absolute;
+    height: 100%;
+    top: 0;
+    z-index: 0;
+    transition: all 0.5s ease;
+    border-radius: 8px;
+}
+a:nth-child(1){
+    width: 100px;
+
+}
+a:nth-child(2){
+    width: 100px;
+
+}
+a:nth-child(3){
+    width: 140px;
+
+}
+
+
+
+
+nav.start-about a:nth-child(2):hover ~ .animation {
+    width: 100px;
+    left: 100px;
+    background-color: blue;
+}
+
+nav.start-portefolio a:nth-child(3):hover ~ .animation {
+    width: 110px;
+    left: 200px;
+    background-color: blue;
+}
+
+nav.start-contact a:nth-child(4):hover ~ .animation {
+    width: 110px;
+    left: 310px;
+    background-color: blue;
+}

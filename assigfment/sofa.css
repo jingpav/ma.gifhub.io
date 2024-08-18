@@ -1,0 +1,921 @@
+/* General Reset and Box Sizing */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Body Styles */
+body {
+    width: 100%;
+    height: 400vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+/* Container Styles */
+.container {
+    width: 100%;
+    height: 300vh;
+    background-color: rgb(254, 233, 206);
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 180px;
+}
+
+/* Navigation Bar Styles */
+.nav-bar {
+    width: 100%;
+    padding: 1rem;
+    opacity: 0.5;
+    background-color: rgb(246, 229, 203);
+    display: flex;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+.nav-bar a {
+    position: relative;
+    text-transform: uppercase;
+    text-decoration: none;
+    color: rgb(15, 15, 16);
+    cursor: pointer;
+    margin: 0 15px;
+    transition: color 0.3s;
+}
+
+.nav-bar a::after {
+    content: "";
+    display: block;
+    height: 2px;
+    background: transparent;
+    transition: background 0.3s, width 0.4s;
+    width: 0;
+    position: absolute;
+    bottom: -5px; /* Adjust the position of the line below the text */
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+/* Text Block Styles */
+.main {
+    max-width: 50%;
+    height: 50vh;
+    box-sizing: border-box;
+    margin-bottom: 20px;
+    margin-top: -30px;
+    position: relative;
+    display: block;
+    float: left;
+    background-color: #fae7d3;
+    justify-items: center;
+}
+
+.nav-bar a:hover {
+    color: rgb(255, 221, 0);
+}
+
+.nav-bar a:hover::after {
+    background-color: yellow;
+    width: 100%;
+}
+
+#bars {
+    font-size: 23px;
+    margin-left: 20px;
+}
+
+p {
+    font-size: 9px;
+    font-family: serif;
+}
+
+.main span h1 {
+    font-family: myfont;
+    font-weight: bold;
+    color: rgb(73, 73, 72);
+    margin-bottom: 15px;
+    font-size: 5.1em;
+}
+
+.btn {
+    display: flex;
+    justify-content: center;
+    margin-top: 50px;
+    position: absolute;
+    box-sizing: border-box;
+    margin-top: 65vh;
+
+}
+
+.btn button {
+
+    background-color: #66bb6a;
+    border: none;
+    border-radius: 9px;
+    color: #fbf7f7;
+    font-size: 16px;
+    font-weight: bold;
+    padding: 19px 30px;
+    margin: 20px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+}
+/*=================about us====================*/
+/* Dropdown Styles */
+/* Dropdown Styles */
+.dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.dropbtn {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    transition: background-color 0.3s, box-shadow 0.3s;
+}
+
+.dropbtn:hover {
+    background-color: #45a049;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content {
+    display: none; /* Hide by default */
+    text-align: left;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    z-index: 1;
+    transition: opacity 0.3s, visibility 0.3s;
+}
+
+.img1 img{
+    position: absolute;
+    display: flex;
+    margin-top: -150px;
+    justify-items: center;
+    
+
+}
+
+.dropdown-content a {
+    color: #333;
+    text-align: center;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+    transition: background-color 0.3s;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.dropdown:hover .dropdown-content {
+    display: block; /* Show on hover */
+    opacity: 1;
+    visibility: visible;
+}
+
+.dropdown:hover .dropbtn {
+    background-color: #3e8e41;
+}
+
+
+/*==================about us==========================*/
+.btn button:hover {
+    background-color: #4caf50;
+    transform: scale(1.05);
+}
+
+.btn button:active {
+    background-color: #388e3c;
+    transform: scale(0.98);
+}
+
+/* Image Styles */
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin-top: 10px;
+    padding: 20px 0;
+}
+
+/*============================================================== About Us Section ===============================================*/
+.abs {
+    padding: 70px;
+    height: auto; /* Adjust height to fit content */
+    width: 90%;
+    background-color: #a69683;
+    display: flex;
+    flex-direction: column;/*Flex direction column  to control the elen box as to column*/
+    align-items: center;
+}
+@font-face {
+    font-family: myfont;
+    src:url(./img/Garet-Book.otf);
+
+}
+.abs p {
+    font-size: 1.5em;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.text {
+    font-size: 1em;
+    color: #f5f5f5;
+    width: 90%;
+    font-family: myfont;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.hot-pro {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 1200px;
+    margin-top: 30px;
+}
+/*=========================================================label1=========================================================*/
+
+
+.label1 {
+    background-color: #fff;
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: 1s;
+}
+.label1:hover{
+    transform: scale(1.05);
+}
+
+
+.label1 img {
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+}
+
+.label p {
+   
+    margin-top: 10px;
+    font-size: 1em;
+    color: #333;
+}
+
+p {
+    font-family: myfont;
+    font-size: 1em;
+    color: #333;
+    position: relative; /* Ensure the position context for the pseudo-element */
+    padding-bottom: 10px; /* Space for the line */
+    transition: color 0.3s; /* Smooth color transition */
+}
+
+/* Hover effect for <p> */
+p:hover {
+    color: rgb(255, 202, 127);
+}
+
+p::after {
+    content: "";
+    display: block;
+    height: 2px; /* Thickness of the line */
+    background: rgb(255, 219, 127); /* Line color */
+    position: absolute;
+    bottom: 0; /* Position the line at the bottom */
+    left: 0;
+    right: 0;
+    transform: scaleX(0); /* Initially hidden */
+    transform-origin: bottom right; /* Scaling starts from the right */
+    transition: transform 0.3s; /* Smooth transition for the line */
+}
+
+/* Show the line on hover */
+p:hover::after {
+    transform: scaleX(1); /* Expand the line to full width */
+    transform-origin: bottom left; /* Scaling starts from the left */
+}
+
+/*===========================================================================================================================*/
+/*=======================================================label2 ============================================================*/
+.label2{
+    font-family: myfont; 
+    background-color: #fff;
+    width: 30%;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: 1s;
+
+}
+.label2:hover{
+    transform: scale(1.05);
+}
+.label2 img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+
+}
+/*=================================================label 3======================================================================*/
+.label3{
+    background-color: #fff;
+    width: 30%;
+    font-family: myfont;
+    margin: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    border-radius: 8px;
+    text-align: center;
+    transition: 1s;
+
+}
+.label3:hover{
+    transform: scale(1.05);
+}
+.label3 img{
+    width: 100%;
+    height: auto;
+    border-radius: 8px;
+
+}
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .hot-pro {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .label {
+        width: 80%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .label {
+        width: 100%;
+    }
+}
+
+/*==============================================================================================================================*/
+.img {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.img div {
+   
+
+    width: 30%;
+    height: 150px;
+    margin: 10px;
+}
+
+/* Furniture Collection Section */
+.acf {
+    width: 100%;
+    padding: 20px;
+    background-color: #faf4f4;
+}
+
+.acf p {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+/*============================================================Card1===========================================================*/
+.card1 {
+    position: relative;
+    display: block;
+    width: 30%;
+    height: 200px;
+    margin: 10px;
+    background-color: #fff; /* Background color to ensure visibility */
+    overflow: hidden; /* Ensure image doesn't overflow the card */
+    border-radius: 8px; /* Optional: for rounded corners */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Optional: for a shadow effect */
+}
+
+.card1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensure the image covers the card area */
+    display: block;
+}
+/*===========================================================================================================================*/
+ 
+
+img{
+    transition: 1s ;
+    
+
+}
+img:hover{
+    transform: scale(1.05);
+}
+/*=======================================================card2==============================================================*/
+.card2{
+    position: relative;
+    display: block;
+    width: 30%;
+    height: 200px;
+    margin:10px;
+    background-color: white;
+    overflow:  hidden;
+    border-radius: 8px;
+    box-shadow:  0 4px 8px rgb(220, 219, 219);
+}
+.card2 img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+/*==========================================================card 3===============================================*/
+.card3{
+    position: relative;
+    width: 30px;
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+ 
+    box-shadow:  0 4px 8px rgb(199, 197, 197);
+    display: block;
+}
+.card3 img{
+    width: 100%;
+    margin-left: 17px;
+    height: 200px;
+    object-fit: cover;
+    margin-top: -10px;
+   display: block;
+}
+
+/*================================================================================================================*/
+/*==============================================card 4============================================================*/
+.card4{
+    position: relative;
+    width: 30px;
+    height: 200px;
+    margin: 10px;
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow:  0  4px 8px rgb(201, 200, 200);
+    display: block;
+}
+.card4 img{
+    width: 70%;
+    margin-left: 50px;
+    margin-top: -12px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+}
+
+/*================================================card 5=====================================*/
+.card5{
+    position: relative;
+    width: 30px;
+    height: 200px;
+    width: 30px;
+    overflow: hidden;
+    border-radius: 8px;
+    margin: 10px;
+    box-shadow:  0  4px 8px rgb(204, 201, 201);
+    display: block;
+
+
+}
+.card5 img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+
+}
+
+/*==========================================card6===============================*/
+.card6{
+    position: relative;
+    width: 30px;
+    height: 200px;
+    overflow: hidden;
+    box-shadow:  0  4px  8px rgb(181, 178, 178);
+    display: block;
+    border-radius: 8px;
+}
+.card6 img {
+    width: 70%;
+    margin-left: 50px;
+    margin-top: -12px;
+    height: 250px;
+    object-fit: cover;
+    display: block;
+
+}
+
+
+
+.product {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.product div {
+    background-color: #fcf9f9;
+    display: block;
+    width: 30%;
+    height: 200px;
+    margin: 10px;
+}
+
+/* Modern Chair Section */
+/*==================== Chair Section ====================*/
+.chair {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.chair p {
+    font-family: myfont;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333; /* Text color for the section heading */
+}
+
+/* Container for the chair items */
+.chair .iteam {
+    position: relative;
+    background-color: #eeecec;
+    display: flex;
+    height: 420px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 20px; /* Space between cards */
+}
+
+/* Styles for individual chair cards */
+.chair1, .chair2, .chair3, .chair4, .chair5, .chair6, .chair7,.chair8,.chair9,.chiar10,.chair11,.chair12,.chair13,.chair14 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 200px;
+    background-color: white; /* Background color of the card */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chair1:hover, .chair2:hover, .chair3:hover, .chair4:hover, .chair5:hover, .chair6:hover, .chair7:hover ,.chair9:hover ,.chair10,.chair11 ,.chair12,.chair13{
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+.chair1 img, .chair2 img, .chair3 img, .chair4 img, .chair5 img, .chair6 img, .chair7 img,.chair8 img,.chair9 img,.chair10 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.chair1 img:hover, .chair2 img:hover, .chair3 img:hover, .chair4 img:hover, .chair5 img:hover, .chair6 img:hover, .chair7 img:hover  ,.chair8 img:hover ,.chair9 img:hover,.chair10 img:hover ,.chair11 img:hover ,.chair12 img:hover{
+    transform: scale(1.1); /* Slightly enlarge image on hover */
+}
+
+/* Button styles within the chair section */
+.chair button {
+    background-color: #66bb6a;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.chair button:hover {
+    background-color: #4caf50;
+    transform: scale(1.05);
+}
+
+.chair button:active {
+    background-color: #388e3c;
+    transform: scale(0.98);
+}
+/*===================================================================================================================================================*/
+.chair button {
+    background-color: #66bb6a;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 5px;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.chair button:hover {
+    background-color: #4caf50;
+    transform: scale(1.05);
+}
+
+.chair button:active {
+    background-color: #388e3c;
+    transform: scale(0.98);
+}
+
+/* Contact Section */
+.contect {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+.contect {
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.contect p {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 2.5em;
+    margin-bottom: 20px;
+    color: white;
+    box-sizing: border-box;
+    width: 50%;
+}
+
+/* Show container */
+.show {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+/* Contect1 and Contect2 */
+.contect1, .contect2 {
+    background-color: #e7b56a;
+    width: 100%;
+   margin: 5px;
+    padding: 20px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative; /* Ensure that the container is positioned relative to place the image */
+}
+
+.contect1 p {
+    font-size: 12px;
+    font-family: myfont;
+    display: flex;
+    flex-direction: column; /* Ensure text wraps below the image if needed */
+    /* Optional: adjust if necessary to avoid overlapping */
+}
+
+.contect1 img {
+    position: absolute;
+    width: 48%;
+    margin-top: -19px;
+    right: 0; /* Align the image to the right */
+    top: 0; /* Align the image to the top */
+    height: auto;
+    transition: 1s;
+}
+
+.contect1 img:hover {
+    transform: scale(1.01);
+}
+
+.contect2 {
+    background-color: #e7b56a;
+    width: 100%;
+    height: 400px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    position: relative; 
+
+    /* Ensure that text wraps around the image */
+}
+
+.contect2 img {
+    float: left; /* Float the image to the left */
+    width: 40%; /* Adjust width as needed */
+    margin-right: 20px; /* Space between the image and text */
+    margin-bottom: 60px; /* Space between the image and text below */
+    height: 440px;
+    margin-left: -20px;
+
+    margin-top: -345px;
+    transition: 1s;
+
+}
+
+.contect2 img:hover {
+    transform: scale(1.01);
+
+}
+
+.contect2 p{
+    font-size: 12px;
+    display: flex;
+    font-family: myfont;
+    color: white;
+    margin-top: 10%;
+    margin-left: 50%;
+   
+    box-sizing: border-box;
+    text-align: left; /* Align text to the left */
+}
+.btn1 button{
+ display: flex;
+ position: absolute;
+ background-color: #e58c0f;
+ color: #ddd;
+ border-radius: 5px;
+ border: none;
+ margin-left: 20px;
+ padding: 20px 26px ;
+
+}
+.btn2 button{
+   
+    background-color: rgb(236, 153, 18);
+    color: white;
+    padding: 20px 26px;
+    border-radius: 5px;
+    border: none;
+    display: flex;
+    float: right;
+    border-radius: 5px;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .nav-bar a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .text {
+        font-size: 1em;
+        width: 95%;
+    }
+
+    .btn button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .img div {
+        width: 45%;
+        height: 100px;
+    }
+
+    .product div {
+        width: 45%;
+        height: 150px;
+    }
+
+    .chair .iteam {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        flex-direction: column;
+    }
+
+    .nav-bar a {
+        margin: 5px 0;
+        font-size: 12px;
+    }
+
+    .text {
+        font-size: 0.9em;
+        width: 100%;
+    }
+
+    .btn button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .img div {
+        width: 100%;
+        height: 100px;
+    }
+
+    .product div {
+        width: 100%;
+        height: 150px;
+    }
+
+    .chair .iteam {
+        height: 100px;
+    }
+}
+@media (max-width: 768px) {
+    .nav-bar a {
+        margin: 0 10px;
+        font-size: 14px;
+    }
+
+    .text {
+        font-size: 1em;
+        width: 95%;
+    }
+
+    .btn button {
+        font-size: 14px;
+        padding: 10px 20px;
+    }
+
+    .img div {
+        width: 45%;
+        height: 100px;
+    }
+
+    .product div {
+        width: 45%;
+        height: 150px;
+    }
+
+    .chair .iteam {
+        height: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav-bar {
+        flex-direction: column;
+    }
+
+    .nav-bar a {
+        margin: 5px 0;
+        font-size: 12px;
+    }
+
+    .text {
+        font-size: 0.9em;
+        width: 100%;
+    }
+
+    .btn button {
+        font-size: 12px;
+        padding: 8px 15px;
+    }
+
+    .img div {
+        width: 100%;
+        height: 100px;
+    }
+
+    .product div {
+        width: 100%;
+        height: 150px;
+    }
+
+    .chair .iteam {
+        height: 100px;
+    }
+}

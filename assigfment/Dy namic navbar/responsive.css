@@ -1,0 +1,73 @@
+*
+{
+    margin:  0 auto;
+    padding: auto;
+    box-sizing: border-box;
+}
+body{
+    width: 100%;
+    height: 100vh;
+    background-color: antiquewhite;
+    
+}
+div a{
+    text-decoration: none;
+  
+}
+.topnav {
+
+    overflow: hidden;
+    background-color: aliceblue;
+ 
+}
+
+.topnav a{
+    color:white;
+ 
+    padding: 15px 10px;
+    text-align: center;
+    transition: 1s;
+    float: left;
+    background-color: rgb(60, 255, 0);
+    display: block;
+    
+}
+.topnav a:hover{
+    color: gold;
+    background-color: rgb(97, 96, 96);
+
+}
+.topnav a.active{
+    background-color: aquamarine;
+    color: aliceblue;
+}
+#home{
+    background-color: rgb(73, 73, 73);
+    
+}
+.topnav .iconbar{
+    display: none;
+}
+/*Here is the mathod to responsove*/
+@media screen and (max-width:600px){
+    .topnav a:not(:first-child){display: none;}
+    .topnav a.iconbar{
+        display: block;
+        float: right;
+    }
+
+    
+}
+@media screen and (max-width:600) {
+    .topnav.responsive{position: relative}
+    .topnav.responsive .iconbar{
+        right: 0;
+        top: 0;
+    }
+    
+}
+.topnav.responsive a{
+    float: none;
+    display: block;
+    text-align: center;
+}

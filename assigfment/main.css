@@ -1,0 +1,81 @@
+/*==================== Chair Section ====================*/
+.chair {
+    padding: 20px;
+    background-color: #f0f0f0;
+}
+
+.chair p {
+    font-family: myfont;
+    font-size: 1.5em;
+    margin-bottom: 20px;
+    color: #333; /* Text color for the section heading */
+}
+
+/* Container for the chair items */
+.chair .iteam {
+    position: relative;
+    background-color: #ccc;
+    display: flex;
+    height: 250px;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    width: 100%;
+    margin-bottom: 20px;
+    gap: 20px; /* Space between cards */
+}
+
+/* Styles for individual chair cards */
+.chair1, .chair2, .chair3, .chair4, .chair5, .chair6, .chair7 {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 15%;
+    height: 200px;
+    background-color: white; /* Background color of the card */
+    overflow: hidden;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Shadow effect for depth */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.chair1:hover, .chair2:hover, .chair3:hover, .chair4:hover, .chair5:hover, .chair6:hover, .chair7:hover {
+    transform: scale(1.05); /* Slightly enlarge on hover */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15); /* More pronounced shadow on hover */
+}
+
+.chair1 img, .chair2 img, .chair3 img, .chair4 img, .chair5 img, .chair6 img, .chair7 img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.3s ease;
+}
+
+.chair1 img:hover, .chair2 img:hover, .chair3 img:hover, .chair4 img:hover, .chair5 img:hover, .chair6 img:hover, .chair7 img:hover {
+    transform: scale(1.1); /* Slightly enlarge image on hover */
+}
+
+/* Button styles within the chair section */
+.chair button {
+    background-color: #66bb6a;
+    border: none;
+    border-radius: 12px;
+    color: #fff;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px 0;
+    cursor: pointer;
+    text-transform: uppercase;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.chair button:hover {
+    background-color: #4caf50;
+    transform: scale(1.05);
+}
+
+.chair button:active {
+    background-color: #388e3c;
+    transform: scale(0.98);
+}

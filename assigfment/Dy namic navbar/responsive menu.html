@@ -1,0 +1,35 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="responsive.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css" integrity="sha512-Kc323vGBEqzTmouAECnVceyQqyqdsSiqLQISBL29aUW4U/M7pSPA/gEUZQqv1cwx4OnYxTxve5UMg5GT6L4JJg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Example css responsive Topnav Menu bar</h1>
+
+    <div class="topnav" id="mytopnav">
+        <a href="#" id="home"><i class = "fa-solid fa-house"></i>Home</a>
+        <a href="#"><i class="fa-solid fa-newspaper"></i>News</a>
+        <a href="#">About</a>
+        <a href="#">Contact</a>
+        <a href="javascript:void(0); " class=" iconbar"  onclick="myfn()"> <i class="fa-solid fa-bars"></i></a>
+    </div>
+
+
+    <script>
+        function myfn(){
+            var a= document.getElementById("mytopnav");
+            if(a.className ==="topnav"){
+                a.className += " responsive";
+            }
+            else{
+                a.className= "topnav";
+            }
+
+        }
+    </script>
+    
+</body>
+</html>
